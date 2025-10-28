@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Real Estate Agent | John Smith</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#dc2626',
+                        accent: '#3b82f6',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .property-card:hover .property-overlay {
+            opacity: 1;
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-slate-700">Vinod Kumar-Professional Real Estate Agent</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition">Services</a>
+                    <a href="#properties" class="text-gray-700 hover:text-primary font-medium transition">Properties</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                    <a href="#properties" class="text-gray-700 hover:text-primary font-medium">Properties</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-cover bg-center" style="background-image: linear-gradient(rgba(33, 33, 122, 0.9), rgba(28, 42, 74, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');">
+      
+       <!-- Announcement Banner -->
+        <div class="flex justify-center mb-8">
+   <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+    <div class="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse">
+    </div>
+    <span class="text-sm font-medium text-white/90">RERA Certificate:<!-- -->
+        
+        <span class="font-bold text-green-400"> K‐RERA/AG/0067/2020</span></span></div>
+     </div>
+     </div>
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Trusted RERA Registered Real Estate Agent in Wayanad</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">With over 10 years of experience, I'll help you navigate the real estate market and find the perfect property for your needs.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+91 9847398816" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">About Me</h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-1/2 flex justify-center">
+       <img src="IMG_0006.jpg" 
+     alt="Real Estate Agent" 
+     class="rounded-lg shadow-lg w-full max-w-[500px] h-auto md:h-[500px] object-cover">
+    </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary-800 mb-4">Vinod Kumar V</h3>
+                        <p class="text-secondary-600 mb-6 leading-relaxed">With over a decade of experience in the real estate industry, I've helped hundreds of clients buy and sell properties. My expertise covers residential, commercial, and investment properties. As a RERA-registered agent, I ensure complete transparency, legal compliance, and customer satisfaction in every transaction.</p>
+                        <p class="text-secondary-600 mb-6 leading-relaxed">Based in Meppadi, Wayanad, I have an in-depth knowledge of the local property market and can help you find the perfect home or investment opportunity that meets your needs and budget.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md">
+                        <h4 class="text-xl font-semibold text-primary-600 mb-4">RERA Registration Details</h4><div class="space-y-3">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-secondary-600 font-medium">Certificate No:</span><span class="text-primary-600 font-semibold">K‐RERA/AG/0067/2020</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200"><span class="text-secondary-600 font-medium">Status:</span><span class="text-green-600 font-semibold">Active</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200"><span class="text-secondary-600 font-medium">Location:</span><span class="text-primary-600 font-semibold">Wayanad, Kerala</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2"><span class="text-secondary-600 font-medium">Phone:</span><span class="text-primary-600 font-semibold">+91 9847398816</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>   
+  <div class=" flex justify-center text-center mt-12">
+  <a href="#contact" class=" bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                        Contact Me
+                    </a>      
+                
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">My Services</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Comprehensive real estate services tailored to your unique needs and goals.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">Home Buying</h3>
+                    <p class="text-gray-600">Expert guidance through the entire home buying process, from search to closing.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-dollar-sign text-secondary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">Home Selling</h3>
+                    <p class="text-gray-600">Maximize your home's value with professional pricing, marketing, and negotiation.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">Market Analysis</h3>
+                    <p class="text-gray-600">Comprehensive market analysis to help you make informed real estate decisions.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">Investment Properties</h3>
+                    <p class="text-gray-600">Identify and evaluate investment opportunities to build your real estate portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">Featured Properties</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore my handpicked selection of premium properties on the market.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden property-card">
+                    <div class="relative h-64 bg-gray-300 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                             alt="Modern Family Home" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-secondary text-white py-1 px-3 rounded-full font-bold">
+                            $450,000
+                        </div>
+                        <div class="property-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#contact" class="bg-white text-primary font-bold py-2 px-6 rounded-lg">Inquire</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Modern Family Home</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-bed mr-2"></i>
+                            <span class="mr-4">3 Beds</span>
+                            <i class="fas fa-bath mr-2"></i>
+                            <span>2 Baths</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Beautiful modern home in a quiet neighborhood with updated kitchen and spacious backyard.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Suburban Area</span>
+                            <a href="#contact" class="text-primary font-medium hover:underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden property-card">
+                    <div class="relative h-64 bg-gray-300 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                             alt="Luxury Condo" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-secondary text-white py-1 px-3 rounded-full font-bold">
+                            $625,000
+                        </div>
+                        <div class="property-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#contact" class="bg-white text-primary font-bold py-2 px-6 rounded-lg">Inquire</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Luxury Condo</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-bed mr-2"></i>
+                            <span class="mr-4">2 Beds</span>
+                            <i class="fas fa-bath mr-2"></i>
+                            <span>2 Baths</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stunning downtown condo with panoramic city views, high-end finishes, and premium amenities.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Downtown</span>
+                            <a href="#contact" class="text-primary font-medium hover:underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden property-card">
+                    <div class="relative h-64 bg-gray-300 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                             alt="Cozy Starter Home" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-secondary text-white py-1 px-3 rounded-full font-bold">
+                            $325,000
+                        </div>
+                        <div class="property-overlay absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="#contact" class="bg-white text-primary font-bold py-2 px-6 rounded-lg">Inquire</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-dark">Cozy Starter Home</h3>
+                        <div class="flex items-center text-gray-600 mb-3">
+                            <i class="fas fa-bed mr-2"></i>
+                            <span class="mr-4">2 Beds</span>
+                            <i class="fas fa-bath mr-2"></i>
+                            <span>1 Bath</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Charming starter home with recent updates, perfect for first-time buyers or small families.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Family Neighborhood</span>
+                            <a href="#contact" class="text-primary font-medium hover:underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                    View All Properties
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">Client Testimonials</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">See what my clients have to say about their experience working with me.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Sarah Johnson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Working with this agent was an absolute pleasure. They found us our dream home within our budget and made the entire process smooth and stress-free."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Michael Chen" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I was impressed by the market knowledge and negotiation skills. We sold our property for 15% above asking price in just two weeks!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Emily Rodriguez" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Emily Rodriguez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a first-time home buyer, I was nervous about the process. My agent guided me every step of the way and made me feel confident in my decisions."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">Get In Touch</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Ready to find your dream property? Contact me today for a consultation.</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-dark">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-gray"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Phone</h4>
+                                <a href="tel:+91 9847398816" class="text-gray-600 hover:text-primary transition">+91 9847398816</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-gray"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Email</h4>
+                                <a href="mailto:vinu1972@gmail.com" class="text-gray-600 hover:text-primary transition">vinu1972@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-certificate text-gray" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">RERA Certificate</h4>
+                                <p class="text-gray-600">K‐RERA/AG/0067/2020</p>
+                            </div> 
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-gray"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Business Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-dark mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition">
+                                <i class="fab fa-whatsapp" ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <form id="contactForm" class="bg-light p-8 rounded-lg">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Your Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4"> Vinod Kumar V</h3>
+                    <p class="text-gray-400 mb-4">Your trusted partner in real estate for over 10 years. Let me help you find your dream property.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                      
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#properties" class="text-gray-400 hover:text-white transition">Properties</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home Buying</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home Selling</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Market Analysis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Investment Properties</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2 text-sm"></i>
+                            <span>+91 9847398816</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-sm"></i>
+                            <span>vinu1972@gmail.com</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Vinod Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
